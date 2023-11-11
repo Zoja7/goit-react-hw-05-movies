@@ -1,0 +1,8 @@
+.moviesListWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 18px;
+    padding-left: 20px;
+    padding-top: 16px;
+}

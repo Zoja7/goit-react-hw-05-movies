@@ -1,0 +1,20 @@
+.movieInfoWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    max-width: 800px;
+    gap: 18px;
+}
+.moviePosterWrapper img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+.overview{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 320px;
+    font-size: 16px;
+    line-height: 1.3;
+}

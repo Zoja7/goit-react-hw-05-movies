@@ -13,3 +13,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+header{
+  padding-top: 30px;
+}
+.headerLink {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 40px;
+  margin-right: 25px;
+  transition: all 0.3s;
+}
+.headerLink.active {
+  color: #eb0d0d;
+}
