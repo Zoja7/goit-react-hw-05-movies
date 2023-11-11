@@ -6,7 +6,7 @@ import MovieDetails from 'pages/MovieDetails';
 // import Reviews from './Reviews';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-export const App = () => {
+const App = () => {
   return (
     <div>
       <Layout>
@@ -22,3 +22,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;
