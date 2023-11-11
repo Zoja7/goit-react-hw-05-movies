@@ -1,9 +1,6 @@
 import Layout from './Layout/Layout';
-import HomePage from 'pages/HomePage';
-// import Movies from 'pages/Movies';
-import MovieDetails from 'pages/MovieDetails';
-// import Cast from './Cast';
-// import Reviews from './Reviews';
+import HomePage from './pages/HomePage';
+import MovieDetails from './pages/MovieDetails';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 const App = () => {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Loader from '../components/Loader/Loader';
+import Loader from './Loader/Loader';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {

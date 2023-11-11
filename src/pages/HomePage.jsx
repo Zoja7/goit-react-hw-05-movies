@@ -1,6 +1,6 @@
 import axios from 'axios';
-import MoviesList from '../components/MovieList/MoviesList';
-import Loader from '../components/Loader/Loader';
+import MoviesList from './MovieList/MoviesList';
+import Loader from './Loader/Loader';
 import { useEffect, useState } from 'react';
 import css from './HomePage.module.css';
 
