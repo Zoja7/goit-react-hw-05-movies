@@ -7,17 +7,26 @@ const MoviesList = ({ movies }) => {
   return (
     <ul className={css.moviesListWrapper}>
       {movies.map(({ id, title, name, original_title, poster_path }) => (
-        <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
-          <li className="moviesListItem">
+        <Link
+          className={css.linkStyle}
+          key={id}
+          to={`/movies/${id}`}
+          state={{ from: location }}
+        >
+          <li className={css.movieListItem}>
             <img
+              className={css.image}
               src={
                 poster_path
                   ? `https://image.tmdb.org/t/p/w500${poster_path}`
                   : notFound
               }
               alt={title || name || original_title}
+              width={300}
             />
-            <p className="moviesListTitle">{title || name || original_title}</p>
+            <h3 className={css.movieListTitle}>
+              {title || name || original_title}
+            </h3>
           </li>
         </Link>
       ))}

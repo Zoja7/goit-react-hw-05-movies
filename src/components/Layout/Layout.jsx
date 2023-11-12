@@ -1,10 +1,11 @@
 import Loader from 'components/Loader/Loader';
 import React, { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+// import css from './Layout.module.css';
 const Layout = () => {
   return (
     <div>
-      <header>
+      <header className="headerStyle">
         <NavLink className="headerLink" to="/">
           Home
         </NavLink>
