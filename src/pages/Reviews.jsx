@@ -12,7 +12,7 @@ const Review = () => {
   if (error) {
     return <p>Error:{error}</p>;
   }
-  if (!review || review.length === 0) {
+  if (review.length === 0) {
     return <p>No review information available</p>;
   }
 
