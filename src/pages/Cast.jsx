@@ -18,30 +18,35 @@ const Cast = () => {
     return <p>No cast information available</p>;
   }
 
-  const { name, original_name, profile_path, character, popularity } = cast[0];
-
   return (
     <div className={css.castContainer}>
-      <div className={css.castWrapper}>
-        {' '}
-        <img
-          className={css.castImage}
-          src={
-            profile_path
-              ? `https://image.tmdb.org/t/p/w500${profile_path}`
-              : defaultImg
-          }
-          alt={name || original_name}
-          width={250}
-        />
-        <div className={css.castInfo}>
-          <h1> {name || original_name}</h1>
-          <h3>Character: {character}</h3>
-          <p>
-            <b>Popularity:</b> {popularity}
-          </p>
-        </div>
-      </div>
+      {cast.map(castItem => {
+        const { name, original_name, profile_path, character, popularity } =
+          castItem;
+
+        return (
+          <div className={css.castWrapper}>
+            {' '}
+            <img
+              className={css.castImage}
+              src={
+                profile_path
+                  ? `https://image.tmdb.org/t/p/w500${profile_path}`
+                  : defaultImg
+              }
+              alt={name || original_name}
+              width={250}
+            />
+            <div className={css.castInfo}>
+              <h1> {name || original_name}</h1>
+              <h3>Character: {character}</h3>
+              <p>
+                <b>Popularity:</b> {popularity}
+              </p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

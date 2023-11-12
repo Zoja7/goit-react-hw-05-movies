@@ -16,34 +16,34 @@ const Review = () => {
     return <p>No review information available</p>;
   }
 
-  const { author, author_details, content, created_at } = review[0];
-  const { avatar_path } = author_details;
-  const formattedDate = moment(created_at).format('MMMM D, YYYY h:mm A');
-  // const numericRating = typeof rating === 'number' ? Number(rating) : rating;
-  //   const numericRating = parseInt(rating, 10);
-
   return (
     <div className={css.reviewContainer}>
-      {' '}
-      <div className={css.reviewWrapper}>
-        <img
-          src={
-            avatar_path
-              ? `https://image.tmdb.org/t/p/w500${avatar_path}`
-              : defaultImg
-          }
-          alt={author}
-          width={250}
-        />
-        <div className={css.reviewInfo}>
-          <h2>{author}</h2>
-          <h3>Date: {formattedDate}</h3>
-          {/* <p>Rating: {numericRating}</p> */}
-          <code className={css.reviewText}>
-            <b>Review:</b> {content}
-          </code>
-        </div>
-      </div>
+      {review.map(reviewItem => {
+        const { author, author_details, content, created_at } = reviewItem;
+        const { avatar_path } = author_details;
+        const formattedDate = moment(created_at).format('MMMM D, YYYY h:mm A');
+
+        return (
+          <div key={reviewItem.id} className={css.reviewWrapper}>
+            <img
+              src={
+                avatar_path
+                  ? `https://image.tmdb.org/t/p/w500${avatar_path}`
+                  : defaultImg
+              }
+              alt={author}
+              width={250}
+            />
+            <div className={css.reviewInfo}>
+              <h2>{author}</h2>
+              <h3>Date: {formattedDate}</h3>
+              <code className={css.reviewText}>
+                <b>Review:</b> {content}
+              </code>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -49,7 +49,7 @@ img {
   text-decoration: none;
   color: rgb(31, 30, 30);
   font-size: 20px;
-  padding: 40px;
+  padding: 20px 40px;
   margin: 0 auto;
   border-radius: 4px;
   transition: color,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
