@@ -1,5 +1,6 @@
 import { useFetchMovieReview } from 'hooks';
 import moment from 'moment';
+import css from './Review.module.css';
 
 const Review = () => {
   const { review, isLoading, error } = useFetchMovieReview();
@@ -22,23 +23,26 @@ const Review = () => {
   //   const numericRating = parseInt(rating, 10);
 
   return (
-    <div>
-      <img
-        src={
-          avatar_path
-            ? `https://image.tmdb.org/t/p/w500${avatar_path}`
-            : defaultImg
-        }
-        alt={author}
-        width={250}
-      />
-      <div>
-        <h2>{author}</h2>
-        <h3>Date: {formattedDate}</h3>
-        {/* <p>Rating: {numericRating}</p> */}
-        <code>
-          <b>Review:</b> {content}
-        </code>
+    <div className={css.reviewContainer}>
+      {' '}
+      <div className={css.reviewWrapper}>
+        <img
+          src={
+            avatar_path
+              ? `https://image.tmdb.org/t/p/w500${avatar_path}`
+              : defaultImg
+          }
+          alt={author}
+          width={250}
+        />
+        <div className={css.reviewInfo}>
+          <h2>{author}</h2>
+          <h3>Date: {formattedDate}</h3>
+          {/* <p>Rating: {numericRating}</p> */}
+          <code className={css.reviewText}>
+            <b>Review:</b> {content}
+          </code>
+        </div>
       </div>
     </div>
   );

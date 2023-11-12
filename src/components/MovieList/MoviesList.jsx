@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import css from './MoviesList.module.css';
-import notFound from 'img/not_found.png.jpg';
+import notFound from 'img/not_found.png';
 const MoviesList = ({ movies }) => {
   const location = useLocation();
 

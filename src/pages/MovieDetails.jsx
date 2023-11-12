@@ -11,8 +11,8 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to={goBackLink.current}>
-        <button>GoBack</button>
+      <Link className="goBackLink" to={goBackLink.current}>
+        <button className="goBackButton">← </button>
       </Link>
       {isLoading && <Loader />}
       {error && <p>Oops, some error occured...</p>}

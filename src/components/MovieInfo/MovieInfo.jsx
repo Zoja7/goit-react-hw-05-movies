@@ -1,5 +1,6 @@
-import notFound from 'img/not_found.png.jpg';
-import { Link } from 'react-router-dom';
+import notFound from 'img/not_found.png';
+import { NavLink } from 'react-router-dom';
+import css from './MovieInfo.module.css';
 
 const MovieInfo = ({ movie }) => {
   const {
@@ -14,8 +15,9 @@ const MovieInfo = ({ movie }) => {
 
   const allGenres = genres.map(genre => genre.name).join(', ');
   return (
-    <div>
+    <div className={css.movieInfoWrapper}>
       <img
+        className={css.movieInfoImage}
         src={
           poster_path
             ? `https://image.tmdb.org/t/p/w500${poster_path}`
@@ -23,17 +25,28 @@ const MovieInfo = ({ movie }) => {
         }
         alt={title || original_title}
       />
-      <div>
+      <div className={css.movieInfoContentWrapper}>
         <h1>{title || original_title}</h1>
         <p>{release_date}</p>
         <h2>User score: {vote_average}</h2>
-        <code>Overview: {overview}</code>
-        <p>Genres: {allGenres}</p>
+        <code>
+          <b>Overview:</b> {overview}
+        </code>
+        <p>
+          <b>Genres: </b>
+          {allGenres}
+        </p>
       </div>
-      <div>
-        <p>Additional info</p>
-        <Link to="cast">Cast</Link>
-        <Link to="reviews">Reviews</Link>
+      <div className={css.movieInfoAdditionalContentWrapper}>
+        <p>
+          <b>Additional info</b>
+        </p>
+        <NavLink className={css.movieCast} to="cast">
+          Cast
+        </NavLink>
+        <NavLink className={css.movieReview} to="reviews">
+          Reviews
+        </NavLink>
       </div>
     </div>
   );

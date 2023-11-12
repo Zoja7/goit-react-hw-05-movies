@@ -6,12 +6,12 @@ import { useFetchMoviesByQuery } from 'hooks/useFetchMoviesByQuery';
 const Movies = () => {
   const { onHandelSubmit, movies, isLoading, error } = useFetchMoviesByQuery();
   return (
-    <>
+    <div className="moviesWrapper">
       <SearchForm onHandelSubmit={onHandelSubmit} />
       {isLoading && <Loader />}
       {error && <p>Oops, some error occured...</p>}
       {movies.length !== 0 && <MoviesList movies={movies} />}
-    </>
+    </div>
   );
 };
 

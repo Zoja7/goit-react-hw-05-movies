@@ -1,4 +1,5 @@
 import { useFetchMovieCast } from 'hooks';
+import css from './Cast.module.css';
 
 const Cast = () => {
   const { cast, isLoading, error } = useFetchMovieCast();
@@ -20,21 +21,26 @@ const Cast = () => {
   const { name, original_name, profile_path, character, popularity } = cast[0];
 
   return (
-    <div>
-      {' '}
-      <img
-        src={
-          profile_path
-            ? `https://image.tmdb.org/t/p/w500${profile_path}`
-            : defaultImg
-        }
-        alt={name || original_name}
-        width={250}
-      />
-      <div>
-        <h1> {name || original_name}</h1>
-        <h3>Character: {character}</h3>
-        <p>Popularity: {popularity}</p>
+    <div className={css.castContainer}>
+      <div className={css.castWrapper}>
+        {' '}
+        <img
+          className={css.castImage}
+          src={
+            profile_path
+              ? `https://image.tmdb.org/t/p/w500${profile_path}`
+              : defaultImg
+          }
+          alt={name || original_name}
+          width={250}
+        />
+        <div className={css.castInfo}>
+          <h1> {name || original_name}</h1>
+          <h3>Character: {character}</h3>
+          <p>
+            <b>Popularity:</b> {popularity}
+          </p>
+        </div>
       </div>
     </div>
   );
