@@ -15,7 +15,11 @@ const Cast = () => {
   }
 
   if (!cast || cast.length === 0) {
-    return <p>No cast information available</p>;
+    return (
+      <p className={css.noCastInformation}>
+        <b>No cast information available</b>
+      </p>
+    );
   }
 
   return (
@@ -25,7 +29,7 @@ const Cast = () => {
           castItem;
 
         return (
-          <div className={css.castWrapper}>
+          <div className={css.castWrapper} key={castItem.id}>
             {' '}
             <img
               className={css.castImage}

@@ -13,7 +13,11 @@ const Review = () => {
     return <p>Error:{error}</p>;
   }
   if (review.length === 0) {
-    return <p>No review information available</p>;
+    return (
+      <p className={css.noReviewInformation}>
+        <b>No review information available</b>
+      </p>
+    );
   }
 
   return (
