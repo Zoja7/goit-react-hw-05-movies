@@ -3,7 +3,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    margin-left: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
     list-style-type: none;
     padding-bottom: 60px ;
     padding-top: 40px;
@@ -25,6 +26,7 @@
     flex-direction: column;
     gap: 16px;
     cursor: pointer;
+    width: 100%;
 }
 
 .linkStyle{
@@ -35,8 +37,8 @@
 
 .image{
     width:100%;
-    max-width: 300px;
-    min-height: 500px;
+    /* max-width: 300px;
+    min-height: 500px; */
     border-radius: 4px;
     transition: transform, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     object-fit: cover;

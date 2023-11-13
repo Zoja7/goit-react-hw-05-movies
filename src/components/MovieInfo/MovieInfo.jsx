@@ -26,7 +26,7 @@ const MovieInfo = ({ movie }) => {
         alt={title || original_title}
       />
       <div className={css.movieInfoContentWrapper}>
-        <h1>{title || original_title}</h1>
+        <h1 className={css.movieInfoTitle}>{title || original_title}</h1>
         <p>{release_date}</p>
         <h2>User score: {vote_average}</h2>
         <code>

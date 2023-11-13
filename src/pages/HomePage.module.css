@@ -1,4 +1,8 @@
 
+.homePageWrapper{
+  display: flex;
+ margin: 0 auto;
+}
   .errorBage {
     padding: 25px;
     border: 1px solid blue;
