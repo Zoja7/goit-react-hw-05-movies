@@ -1,6 +1,7 @@
 .castContainer{
     padding-left: 20px;
     padding-right: 20px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
@@ -36,9 +37,12 @@
     padding-top: 18px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 14px;
 }
 .noCastInformation{
     text-align: center;
     margin-bottom: 40px;
+    font-size: 12px;
+    margin: 0 auto;
+    width: 100%;
 }

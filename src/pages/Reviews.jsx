@@ -39,8 +39,8 @@ const Review = () => {
               width={250}
             />
             <div className={css.reviewInfo}>
-              <h2>{author}</h2>
-              <h3>Date: {formattedDate}</h3>
+              <h2 className={css.reviewAuthor}>{author}</h2>
+              <h3 className={css.reviewDate}>Date: {formattedDate}</h3>
               <code className={css.reviewText}>
                 <b>Review:</b> {content}
               </code>
